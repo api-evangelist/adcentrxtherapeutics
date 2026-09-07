@@ -1,0 +1,111 @@
+generated: '2026-09-07'
+method: probed
+source: live HTTP probes of every host this record knows (adcentrx.com, www.adcentrx.com)
+note: >-
+  No .well-known document is served. Every path on both hosts answered HTTP 202 with a
+  SiteGround anti-bot captcha shell (response header `sg-captcha: challenge`, body a
+  169-byte meta-refresh to /.well-known/sgcaptcha/), not a document. A 202 carrying an
+  HTML challenge is recorded as a MISS, not a hit, so no WellKnown or SecurityTxt pointer
+  is emitted. The same challenge is served to a browser User-Agent and to Googlebot.
+  DNS shows no api., docs., developer., developers., portal., data. or app. host exists
+  under adcentrx.com, and the site (recovered from the Internet Archive, snapshot
+  20260810050011) is a WordPress corporate/investor site with no developer section.
+hosts:
+- host: adcentrx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+- host: www.adcentrx.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 202
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 202
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 202
+    file: null
+  - path: /.well-known/api-catalog
+    status: 202
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 202
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 202
+    file: null
+  - path: /.well-known/agent.json
+    status: 202
+    file: null
+contract_discovery:
+  note: >-
+    STEP 0b contract discovery ran against every host the record knows. apis.yml carries no
+    apis[] entries, so there is no baseURL or OpenAPI servers[] host; the docs/console host
+    is the corporate site itself. No OpenAPI, GraphQL, MCP, A2A, OGC, gRPC or WSDL surface
+    was found, and no candidate host resolves in DNS.
+  probes:
+  - url: https://www.adcentrx.com/openapi.json
+    status: 202
+    result: captcha challenge shell, not a spec
+  - url: https://www.adcentrx.com/openapi.yaml
+    status: 202
+    result: captcha challenge shell, not a spec
+  - url: https://www.adcentrx.com/swagger.json
+    status: 202
+    result: captcha challenge shell, not a spec
+  - url: https://www.adcentrx.com/api-docs
+    status: 202
+    result: captcha challenge shell
+  - url: https://www.adcentrx.com/graphql
+    status: 202
+    result: captcha challenge shell
+  - url: https://www.adcentrx.com/llms.txt
+    status: 202
+    result: captcha challenge shell
+  - url: https://www.adcentrx.com/robots.txt
+    status: 202
+    result: captcha challenge shell
+  - url: https://www.adcentrx.com/sitemap.xml
+    status: 202
+    result: captcha challenge shell
+  - url: https://api.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://docs.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://developer.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://developers.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://portal.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://data.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve
+  - url: https://app.adcentrx.com/
+    status: null
+    result: NXDOMAIN - host does not resolve

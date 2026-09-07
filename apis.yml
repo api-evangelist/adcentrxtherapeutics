@@ -1,7 +1,15 @@
 aid: adcentrxtherapeutics
-name: Adcentrxtherapeutics
-description: 'Adcentrxtherapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: Adcentrx Therapeutics
+description: 'Adcentrx Therapeutics is a clinical-stage biotechnology company headquartered
+  in San Diego, California, developing next-generation antibody-drug conjugates (ADCs)
+  and protein conjugate therapeutics for cancer and other life-threatening diseases.
+  Its proprietary i-Conjugation technology platform pairs stable conjugation chemistry
+  and protease-cleavable linkers with novel small-molecule payloads; the clinical pipeline
+  includes ADRX-0706 (Nectin-4) and ADRX-0405 (STEAP1). The company was surfaced via
+  the API Evangelist harvest backlog (source: secondary-market). It publishes a corporate
+  and investor-relations website only — no developer program, API, SDK, or machine-readable
+  specification of any kind was found.'
+image: https://www.adcentrx.com/wp-content/uploads/2021/11/Adcentrx-logo.png
 url: https://raw.githubusercontent.com/api-evangelist/adcentrxtherapeutics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +20,13 @@ created: '2026-09-07'
 modified: '2026-09-07'
 tags:
 - Company
+- Biotechnology
+- Pharmaceuticals
+- Life Sciences
+- Oncology
+- Healthcare
+- Clinical Stage
+- Antibody Drug Conjugates
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/adcentrxtherapeutics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/adcentrxtherapeutics
+  url: https://www.adcentrx.com/
+- type: About
+  url: https://www.adcentrx.com/about/
+- type: Blog
+  url: https://www.adcentrx.com/news/
+- type: BlogRSS
+  url: https://www.adcentrx.com/feed/
+- type: Support
+  url: https://www.adcentrx.com/contact/
+- type: TermsOfService
+  url: https://www.adcentrx.com/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.adcentrx.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/adcentrx-therapeutics
+x-enrichment:
+  date: '2026-09-07'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Adcentrx Therapeutics is a clinical-stage oncology biotech developing antibody-drug
+    conjugates (ADRX-0706, ADRX-0405); its only web property is a SiteGround-hosted
+    WordPress corporate/investor site whose entire path space answers HTTP 202 with an
+    sg-captcha robot challenge, and no api., docs., developer. or portal. host exists in
+    DNS - the site nav, read from an Internet Archive snapshot, has no developer section.
+  evidence:
+  - url: https://www.adcentrx.com/
+    status: 202
+  - url: https://www.adcentrx.com/.well-known/api-catalog
+    status: 202
+  - url: https://www.adcentrx.com/openapi.json
+    status: 202
+  - url: http://web.archive.org/web/20260810050011/https://www.adcentrx.com/
+    status: 200
+  checked: '2026-09-07'
