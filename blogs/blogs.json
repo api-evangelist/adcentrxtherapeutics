@@ -1,0 +1,21 @@
+{
+  "repo": "adcentrxtherapeutics",
+  "feeds": [
+    {
+      "source": "https://www.adcentrx.com/news/",
+      "feed_url": "https://www.adcentrx.com/news/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://www.adcentrx.com/about/",
+      "feed_url": "https://www.adcentrx.com/about/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-13T13:00:00Z"
+}
